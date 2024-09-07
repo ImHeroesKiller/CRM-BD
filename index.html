@@ -18,14 +18,17 @@
             padding: 15px;
             text-align: center;
         }
-        .container {
-            margin: 20px;
+        .main {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
         }
-        .form-section {
+        .form-section, .dashboard {
             background-color: #ffffff;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 48%; /* Agar dua bagian ini saling berdampingan */
         }
         iframe {
             width: 100%;
@@ -33,11 +36,7 @@
             border: none;
         }
         .dashboard {
-            margin-top: 20px;
-            padding: 20px;
             background-color: #e8f5e9;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -49,7 +48,7 @@
     </div>
 
     <!-- Main Content -->
-    <div class="container">
+    <div class="main">
         <!-- Form Section -->
         <div class="form-section">
             <h2>Project Form</h2>
