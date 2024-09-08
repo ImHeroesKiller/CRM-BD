@@ -37,8 +37,9 @@
             height: 800px; /* Mengatur tinggi sesuai dengan layar */
             border: none;
         }
-        .dashboard {
-            background-color: #e8f5e9;
+        .dashboard iframe {
+            width: 100%;
+            height: 450px; /* Sesuaikan tinggi dashboard Looker Studio */
         }
         @media screen and (max-width: 768px) {
             .main {
@@ -68,12 +69,7 @@
         <!-- Dashboard Section -->
         <div class="dashboard">
             <h2>Dashboard</h2>
-            <p>Here you can monitor the project status and communication progress.</p>
-            <ul>
-                <li>Upcoming Meetings</li>
-                <li>Latest Client Feedback</li>
-                <li>Project Summary</li>
-            </ul>
+            <iframe width="600" height="450" src="https://lookerstudio.google.com/embed/reporting/07bba579-7b0b-4c0f-830b-bd99944f5714/page/veHBE" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
         </div>
     </div>
 
