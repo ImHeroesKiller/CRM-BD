@@ -12,64 +12,65 @@
             margin: 0;
             padding: 0;
         }
+
         .header {
             background-color: #6200ea;
             color: white;
             padding: 10px;
             text-align: center;
         }
+
         .main {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column; /* Default: Kolom untuk mobile */
             padding: 20px;
-            gap: 20px; /* Memberikan jarak antar card/box */
+            gap: 20px;
         }
+
         .form-section, .dashboard {
             background-color: #ffffff;
-            padding: 20px; /* Mengurangi padding dalam box */
+            padding: 20px;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: 48%;
+            width: 100%; /* Default: Lebar penuh untuk mobile */
             box-sizing: border-box;
         }
+
         iframe {
             width: 100%;
-            height: 800px; /* Mengatur tinggi sesuai dengan layar */
             border: none;
         }
-        .dashboard iframe {
-            width: 100%;
-            height: 450px; /* Sesuaikan tinggi dashboard Looker Studio */
+
+        .form-section iframe {
+            height: 800px; /* Sesuaikan tinggi formulir */
         }
-        @media screen and (max-width: 768px) {
+
+        @media screen and (min-width: 768px) { 
             .main {
-                flex-direction: column;
+                flex-direction: row; /* Baris untuk layar lebih besar */
             }
+
             .form-section, .dashboard {
-                width: 100%;
+                width: 48%; 
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
     <div class="header">
         <h1>Prospek Project - Rianti</h1>
     </div>
 
-    <!-- Main Content -->
     <div class="main">
-        <!-- Form Section -->
-        <div class="form-section">
-            <h2>Project Form</h2>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScirYz6QG1uUqZv1ABBxHB2FXyOsN0ZOwBaXmBxH85UGTKrJA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-        </div>
-
-        <!-- Dashboard Section -->
         <div class="dashboard">
             <h2>Dashboard</h2>
             <iframe width="600" height="450" src="https://lookerstudio.google.com/embed/reporting/07bba579-7b0b-4c0f-830b-bd99944f5714/page/veHBE" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+        </div>
+
+        <div class="form-section">
+            <h2>Project Form</h2>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScirYz6QG1uUqZv1ABBxHB2FXyOsN0ZOwBaXmBxH85UGTKrJA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </div>
     </div>
 
